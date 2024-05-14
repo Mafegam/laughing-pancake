@@ -1,17 +1,66 @@
-<p>Hello world!</p>
+<nav class="navbar navCustom navbar-expand-lg">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li>
+                    <img src="../assets/NavBarLogo.png" alt="navBarLogo" class="navBarLogo">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Women's clothing</a></li>
+                        <li><a class="dropdown-item" href="#">Men's clothing</a></li>
+                        <li><a class="dropdown-item" href="#">Men's accessories</a></li>
+                        <li><a class="dropdown-item" href="#">Women's accessories</a></li>
+                        <li><a class="dropdown-item" href="#">Jewelry</a></li>
+                        <li><a class="dropdown-item" href="#">Technology</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                </li>
+            </ul>
+            <form class="d-flexNav" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search Products" aria-label="Search">
+                <button class="btn btn-outline-info" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <span class="mdi mdi-cart"></span>
 
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
-
-<button type="button" class="btn btn-link">Link</button>
+</nav>
 
 
+<main class="container d-flex flex-wrap justify-content-center gap-5">
+    @for(elemento of todosLosDatos; track elemento.id){
+    <div class="card" style="width: 25rem;">
+        <img src="{{elemento.image}}" class="card-img-top" alt="foto de {{elemento.title}}">
+        <div class="card-body">
+            <h5 class="card-title">{{elemento.title}}</h5>
+            <p class="card-text">${{elemento.price}}</p>
+            <p class="rating">{{elemento.rating.rate}}</p>
+        </div>
+    </div>
+    }
+</main>
 
-<!-- <router-outlet /> -->
 
+
+
+
+
+
+<footer class="text-center my-5">&copy; 2024</footer>
+<!-- <router-outlet></router-outlet> -->
