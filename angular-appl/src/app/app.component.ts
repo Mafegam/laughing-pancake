@@ -8,6 +8,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 
+import { ElementRef } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -32,8 +36,6 @@ export class AppComponent {
       }
     })
   }
-
-  
 
   ngOnInit(){
     this.obtenerTodosLosDatos();

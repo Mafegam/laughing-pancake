@@ -1,8 +1,10 @@
-<nav class="navbar navCustom navbar-expand-lg">
+<nav class="navbar navCustom navbar-expand-lg"  >
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color: rgb(136, 122, 172);
+            ">
+            <span class="navbar-toggler-icon" style="border-color: rgb(136, 122, 172);
+            "></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -20,7 +22,7 @@
                         aria-expanded="false">
                         Categories
                     </a>
-                    <ul class="dropdown-menu" style="background-color: grey;">
+                    <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Women's clothing</a></li>
                         <li><a class="dropdown-item" href="#">Men's clothing</a></li>
                         <li><a class="dropdown-item" href="#">Men's accessories</a></li>
@@ -38,7 +40,7 @@
             </form>
         </div>
     </div>
-    <span class="mdi mdi-cart"></span>
+    <a href="#" class="mdi mdi-cart"></a>
 
 </nav>
 
@@ -46,8 +48,13 @@
 <main class="container d-flex flex-wrap justify-content-center gap-5">
     @for(elemento of todosLosDatos; track elemento.id){
     <div class="card" style="width: 25rem;">
+
         <img src="{{elemento.image}}" class="fotoProducto" alt="foto de {{elemento.title}}">
-        <p class="tooltipText">Add to Cart</p>
+        <div id="cardTop">
+            <span class="mdi mdi-cart-arrow-down"></span>
+            <span class="card-top-text">Add to Cart</span>
+        </div>
+
         <div class="card-body">
             <h5 class="card-title">{{elemento.title}}</h5>
             <div class="contenedorPrecioRating">
@@ -63,10 +70,6 @@
     </div>
     }
 </main>
-
-
-
-
 
 
 
