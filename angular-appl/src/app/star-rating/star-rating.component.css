@@ -1,0 +1,11 @@
+fa-icon{
+    color: grey;
+    font-size: 20px ;
+    cursor: pointer;
+
+&.rated{
+    color: orange;
+}
+
+transition: color 0.3s ease-in-out;
+}

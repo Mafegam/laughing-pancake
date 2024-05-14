@@ -20,7 +20,7 @@
                         aria-expanded="false">
                         Categories
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="background-color: grey;">
                         <li><a class="dropdown-item" href="#">Women's clothing</a></li>
                         <li><a class="dropdown-item" href="#">Men's clothing</a></li>
                         <li><a class="dropdown-item" href="#">Men's accessories</a></li>
@@ -46,11 +46,19 @@
 <main class="container d-flex flex-wrap justify-content-center gap-5">
     @for(elemento of todosLosDatos; track elemento.id){
     <div class="card" style="width: 25rem;">
-        <img src="{{elemento.image}}" class="card-img-top" alt="foto de {{elemento.title}}">
+        <img src="{{elemento.image}}" class="fotoProducto" alt="foto de {{elemento.title}}">
+        <p class="tooltipText">Add to Cart</p>
         <div class="card-body">
             <h5 class="card-title">{{elemento.title}}</h5>
-            <p class="card-text">${{elemento.price}}</p>
-            <p class="rating">{{elemento.rating.rate}}</p>
+            <div class="contenedorPrecioRating">
+                <p class="card-text">${{elemento.price}}</p>
+                <div class="contenedorRating">
+                    <app-star-rating [rating]=(elemento.rating.rate)></app-star-rating>
+                    <p class="votes" style="color: grey;">({{elemento.rating.count}})</p>
+                </div>
+            </div>
+
+
         </div>
     </div>
     }
@@ -62,5 +70,5 @@
 
 
 
-<footer class="text-center my-5">&copy; 2024</footer>
+<footer class="text-center ">María Fernanda Gamboa &copy; 2024</footer>
 <!-- <router-outlet></router-outlet> -->
