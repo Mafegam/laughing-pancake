@@ -7,7 +7,8 @@
     text-shadow: 2px 2px rgb(0, 0, 0);
 }
 .dropdown-menu {
-    background-image: linear-gradient(to right top, #6f4b60, #71576b, #746374, #786e7b, #7d7981, #747277, #6c6b6e, #646464, #4b4b4b, #333333, #1d1d1d, #000000);}
+    background-image: linear-gradient(to right top, #6f4b60, #71576b, #746374, #786e7b, #7d7981, #747277, #6c6b6e, #646464, #4b4b4b, #333333, #1d1d1d, #000000);
+}
 
 .navCustom {
     background: rgb(96, 96, 96);
@@ -20,6 +21,7 @@
 
 .nav-item {
     color: white;
+    margin-left: 10px;
 }
 
 .d-flexNav {
@@ -67,6 +69,11 @@
     cursor: pointer;
 
 }
+#cardTop:hover{
+    background-color: black;
+    transition-duration: 1s;
+
+}
 
 #cardTop span {
     font-family: "Roboto", sans-serif;
@@ -86,6 +93,7 @@
 
 .mdi-cart-arrow-down .card-top-text {
     margin-top: 10px;
+    text-decoration: none;
     margin-bottom: 0;
     color: white;
     text-align: center;
